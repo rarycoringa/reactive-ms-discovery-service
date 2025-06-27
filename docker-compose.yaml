@@ -1,0 +1,21 @@
+services:
+  discovery1:
+    build: .
+    container_name: discovery1
+    command: ["--spring.profiles.active=discovery1"]
+    ports:
+      - "8761:8761"
+
+  discovery2:
+    build: .
+    container_name: discovery2
+    command: ["--spring.profiles.active=discovery2"]
+    ports:
+      - "8762:8762"
+
+  discovery3:
+    build: .
+    container_name: discovery3
+    command: ["--spring.profiles.active=discovery3"]
+    ports:
+      - "8763:8763"

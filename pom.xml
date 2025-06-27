@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.edu.ufrn</groupId>
-	<artifactId>discoveryservice</artifactId>
+	<artifactId>discovery</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>discoveryservice</name>
+	<name>discovery</name>
 	<description>Discovery Service</description>
 	<url/>
 	<licenses>
