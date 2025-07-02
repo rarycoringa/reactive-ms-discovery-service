@@ -5,6 +5,8 @@ services:
     command: ["--spring.profiles.active=discovery1"]
     ports:
       - "8761:8761"
+    networks:
+      - dist-sys-ms-network
 
   discovery2:
     build: .
@@ -12,6 +14,8 @@ services:
     command: ["--spring.profiles.active=discovery2"]
     ports:
       - "8762:8762"
+    networks:
+      - dist-sys-ms-network
 
   discovery3:
     build: .
@@ -19,3 +23,9 @@ services:
     command: ["--spring.profiles.active=discovery3"]
     ports:
       - "8763:8763"
+    networks:
+      - dist-sys-ms-network
+
+networks:
+  dist-sys-ms-network:
+    external: true
