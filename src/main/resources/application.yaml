@@ -1,0 +1,19 @@
+spring:
+    application:
+        name: discovery
+    cloud:
+        config:
+            discovery:
+                enabled: true
+                service-id: config
+    config:
+        import: "optional:configserver:"
+
+eureka:
+    client:
+        enabled: true
+        fetch-registry: true
+        register-with-eureka: true
+    instance:
+        hostname: discovery
+        prefer-ip-address: true
