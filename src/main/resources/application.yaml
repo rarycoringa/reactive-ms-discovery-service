@@ -15,5 +15,4 @@ eureka:
         fetch-registry: true
         register-with-eureka: true
     instance:
-        hostname: discovery
         prefer-ip-address: true

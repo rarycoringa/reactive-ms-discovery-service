@@ -1,0 +1,11 @@
+server:
+    port: 8761
+
+eureka:
+    client:
+        service-url:
+            defaultZone:
+                - http://discovery2:8762/eureka
+                - http://discovery3:8763/eureka
+    instance:
+        hostname: discovery1
