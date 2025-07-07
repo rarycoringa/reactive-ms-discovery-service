@@ -11,8 +11,7 @@ spring:
 
 eureka:
     client:
-        enabled: true
-        fetch-registry: true
-        register-with-eureka: true
+        fetch-registry: false
+        register-with-eureka: false
     instance:
         prefer-ip-address: true

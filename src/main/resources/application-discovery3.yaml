@@ -4,8 +4,4 @@ server:
 eureka:
     client:
         service-url:
-            defaultZone:
-                - http://discovery1:8761/eureka
-                - http://discovery2:8762/eureka
-    instance:
-        hostname: discovery3
+            defaultZone: http://discovery1:8761/eureka,http://discovery2:8762/eureka
