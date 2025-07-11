@@ -1,7 +1,0 @@
-server:
-    port: 8762
-
-eureka:
-    client:
-        service-url:
-            defaultZone: http://discovery1:8761/eureka,http://discovery3:8763/eureka

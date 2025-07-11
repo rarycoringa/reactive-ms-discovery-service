@@ -2,7 +2,9 @@ services:
   discovery1:
     build: .
     container_name: discovery1
-    command: ["--spring.profiles.active=discovery1"]
+    environment:
+      - SERVER_PORT=8761
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery2:8762/eureka
     ports:
       - "8761:8761"
     networks:
@@ -11,18 +13,11 @@ services:
   discovery2:
     build: .
     container_name: discovery2
-    command: ["--spring.profiles.active=discovery2"]
+    environment:
+      - SERVER_PORT=8762
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://discovery1:8761/eureka
     ports:
       - "8762:8762"
-    networks:
-      - dist-sys-ms-network
-
-  discovery3:
-    build: .
-    container_name: discovery3
-    command: ["--spring.profiles.active=discovery3"]
-    ports:
-      - "8763:8763"
     networks:
       - dist-sys-ms-network
 
