@@ -9,7 +9,7 @@ services:
     ports:
       - "8761:8761"
     networks:
-      - dist-sys-ms-network
+      - reactive-ms-network
 
   discovery2:
     build: .
@@ -21,8 +21,8 @@ services:
     ports:
       - "8762:8762"
     networks:
-      - dist-sys-ms-network
+      - reactive-ms-network
 
 networks:
-  dist-sys-ms-network:
+  reactive-ms-network:
     external: true
